@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita dan Acara - Universitas Handayani Makassar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+            color: #111827;
+        }
+        .navbar {
+            background-color: #1e3a8a;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #bfdbfe;
+            transform: translateY(-1px);
+        }
+        .section {
+            animation: slideIn 0.8s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        .btn {
+            background: #16a34a;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background: #15803d;
+            transform: scale(1.03);
+        }
+        .full-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+        }
+        .full-content.active {
+            max-height: 1000px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold">Universitas Handayani</a>
+            <div class="space-x-4">
+                <a href="index.html" class="text-white">Beranda</a>
+                <a href="registration.html" class="text-white">Pendaftaran</a>
+                <a href="news-events.html" class="text-blue-200 font-semibold">Berita dan Acara</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- News and Events Section -->
+    <section class="section container mx-auto py-10 px-4">
+        <h1 class="text-3xl md:text-4xl font-bold text-center mb-6">Berita dan Acara</h1>
+        <p class="text-lg text-center mb-10 text-gray-600">Ikuti kabar terbaru dan acara menarik dari Universitas Handayani Makassar!</p>
+
+        <!-- News and Events List -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="card p-6">
+                <h2 class="text-xl font-semibold mb-2">Mahasiswa Lulus Tanpa Skripsi melalui Magang Riset MBKM</h2>
+                <p class="text-gray-600 mb-4">Universitas Handayani Makassar meluluskan sejumlah mahasiswa tanpa skripsi melalui program Magang Riset dalam Merdeka Belajar Kampus Merdeka (MBKM), menunjukkan langkah inovatif menuju pendidikan modern.</p>
+                <p class="text-sm text-gray-500 mb-4">16 Mei 2025</p>
+                <button class="btn read-more" data-target="mbkm-content">Baca Selengkapnya</button>
+                <div id="mbkm-content" class="full-content mt-4 text-gray-600">
+                    <p>Makassar – Universitas Handayani Makassar kembali menunjukkan komitmennya dalam menerapkan program Merdeka Belajar Kampus Merdeka (MBKM). Sebanyak delapan mahasiswa Teknik Informatika berhasil lulus tanpa skripsi melalui program Magang Riset di BRIN Bandung dan UPN Veteran Jawa Timur. Program ini diakui setara dengan tugas akhir, memberikan pengalaman praktis dan penelitian mendalam yang relevan dengan dunia industri.</p>
+                    <p><a href="https://handayani.ac.id/berita" class="text-blue-600 hover:underline">Kunjungi situs resmi untuk informasi lebih lanjut</a>.</p>
+                </div>
+            </div>
+            <div class="card p-6">
+                <h2 class="text-xl font-semibold mb-2">Pengumuman Libur Hari Raya Idul Fitri 1446 H</h2>
+                <p class="text-gray-600 mb-4">Libur Idul Fitri 1446 H berlangsung dari 28 Maret hingga 7 April 2025. Aktivitas kantor dan akademik akan kembali aktif pada 8 April 2025.</p>
+                <p class="text-sm text-gray-500 mb-4">28 Maret 2025</p>
+                <button class="btn read-more" data-target="idulfitri-content">Baca Selengkapnya</button>
+                <div id="idulfitri-content" class="full-content mt-4 text-gray-600">
+                    <p>Diumumkan kepada seluruh civitas akademika Universitas Handayani Makassar bahwa libur Hari Raya Idul Fitri 1446 H ditetapkan pada tanggal 28 Maret hingga 7 April 2025. Aktivitas kantor dan akademik akan kembali aktif pada tanggal 8 April 2025. Pastikan untuk mempersiapkan segala kebutuhan akademik sebelum libur dimulai.</p>
+                </div>
+            </div>
+            <div class="card p-6">
+                <h2 class="text-xl font-semibold mb-2">Pelatihan Teknologi Gamifikasi untuk Guru</h2>
+                <p class="text-gray-600 mb-4">Universitas Handayani mengadakan pelatihan untuk meningkatkan keterampilan guru melalui teknologi gamifikasi, mendukung kemajuan pendidikan.</p>
+                <p class="text-sm text-gray-500 mb-4">2 September 2024</p>
+                <button class="btn read-more" data-target="gamifikasi-content">Baca Selengkapnya</button>
+                <div id="gamifikasi-content" class="full-content mt-4 text-gray-600">
+                    <p>Universitas Handayani Makassar menyelenggarakan pelatihan teknologi gamifikasi untuk guru pada 2 September 2024. Acara ini bertujuan meningkatkan keterampilan pengajar dalam memanfaatkan teknologi untuk menciptakan pembelajaran yang interaktif dan menarik, mendukung transformasi pendidikan di era digital.</p>
+                    <p><a href="https://handayani.ac.id/berita" class="text-blue-600 hover:underline">Kunjungi situs resmi untuk informasi lebih lanjut</a>.</p>
+                </div>
+            </div>
+            <div class="card p-6">
+                <h2 class="text-xl font-semibold mb-2">Perubahan Nomenklatur Prodi Teknik Komputer</h2>
+                <p class="text-gray-600 mb-4">Program Studi Teknik Komputer resmi berubah menjadi Sistem Komputer berdasarkan keputusan Direktorat Jenderal Pendidikan Tinggi.</p>
+                <p class="text-sm text-gray-500 mb-4">15 Juli 2025</p>
+                <button class="btn read-more" data-target="nomenklatur-content">Baca Selengkapnya</button>
+                <div id="nomenklatur-content" class="full-content mt-4 text-gray-600">
+                    <p>Universitas Handayani Makassar mengumumkan perubahan nomenklatur Program Studi Teknik Komputer menjadi Sistem Komputer, sesuai dengan keputusan Direktorat Jenderal Pendidikan Tinggi. Perubahan ini mencerminkan pembaruan kurikulum yang lebih relevan dengan kebutuhan industri teknologi saat ini.</p>
+                    <p><a href="https://handayani.ac.id/berita" class="text-blue-600 hover:underline">Kunjungi situs resmi untuk informasi lebih lanjut</a>.</p>
+                </div>
+            </div>
+            <div class="card p-6">
+                <h2 class="text-xl font-semibold mb-2">Juara 3 English Speech Competition ALSA</h2>
+                <p class="text-gray-600 mb-4">Mahasiswa Universitas Handayani meraih juara 3 dalam kompetisi English Speech bertema “Social Inequality” di Fakultas Hukum Universitas Hasanuddin.</p>
+                <p class="text-sm text-gray-500 mb-4">22 Oktober 2024</p>
+                <button class="btn read-more" data-target="speech-content">Baca Selengkapnya</button>
+                <div id="speech-content" class="full-content mt-4 text-gray-600">
+                    <p>Pada 22 Oktober 2024, mahasiswa Universitas Handayani Makassar berhasil meraih juara 3 dalam English Speech Competition yang diselenggarakan oleh ALSA di Fakultas Hukum Universitas Hasanuddin. Kompetisi bertema “Social Inequality” ini menunjukkan kemampuan mahasiswa dalam berbicara di depan umum dan menyampaikan ide-ide kritis.</p>
+                    <p><a href="https://handayani.ac.id/berita" class="text-blue-600 hover:underline">Kunjungi situs resmi untuk informasi lebih lanjut</a>.</p>
+                </div>
+            </div>
+            <div class="card p-6">
+                <h2 class="text-xl font-semibold mb-2">Ujian Skripsi Berlangsung Sukses</h2>
+                <p class="text-gray-600 mb-4">Ujian skripsi untuk jurusan Teknik Informatika, Sistem Informasi, dan Manajemen Informatika diadakan pada 7 Oktober 2024, diikuti 19 mahasiswa.</p>
+                <p class="text-sm text-gray-500 mb-4">7 Oktober 2024</p>
+                <button class="btn read-more" data-target="skripsi-content">Baca Selengkapnya</button>
+                <div id="skripsi-content" class="full-content mt-4 text-gray-600">
+                    <p>Pada 7 Oktober 2024, Universitas Handayani Makassar menyelenggarakan ujian skripsi untuk 19 mahasiswa dari jurusan Teknik Informatika, Sistem Informasi, dan Manajemen Informatika. Ujian berlangsung sukses dengan berbagai topik penelitian yang relevan dengan perkembangan teknologi informasi.</p>
+                    <p><a href="https://handayani.ac.id/berita" class="text-blue-600 hover:underline">Kunjungi situs resmi untuk informasi lebih lanjut</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Universitas Handayani Makassar. All rights reserved.</p>
+            <p>Jl. Adyaksa Baru No. 1, Makassar, Sulawesi Selatan</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Toggle Functionality -->
+    <script>
+        const readMoreButtons = document.querySelectorAll('.read-more');
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+                content.classList.toggle('active');
+                button.textContent = content.classList.contains('active') ? 'Tutup' : 'Baca Selengkapnya';
+            });
+        });
+    </script>
+</body>
+</html>
