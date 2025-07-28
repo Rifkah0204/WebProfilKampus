@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran - Universitas Handayani Makassar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+            color: #111827;
+        }
+        .navbar {
+            background-color: #1e3a8a;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #bfdbfe;
+            transform: translateY(-1px);
+        }
+        .section {
+            animation: slideIn 0.8s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        .btn {
+            background: #16a34a;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background: #15803d;
+            transform: scale(1.03);
+        }
+        #registrationForm {
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        #registrationForm.active {
+            max-height: 1200px;
+            opacity: 1;
+        }
+        input, select {
+            transition: border-color 0.3s ease;
+        }
+        input:focus, select:focus {
+            border-color: #16a34a;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold">Universitas Handayani</a>
+            <div class="space-x-4">
+                <a href="index.html" class="text-white">Beranda</a>
+                <a href="registration.html" class="text-blue-200 font-semibold">Pendaftaran</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Menu Section -->
+    <section class="section container mx-auto py-10 px-4">
+        <h1 class="text-3xl md:text-4xl font-bold text-center mb-6">Menu Pendaftaran Mahasiswa Baru 2025/2026</h1>
+        <p class="text-lg text-center mb-10 text-gray-600">Daftar sekarang di Universitas Handayani Makassar untuk memulai perjalananmu menuju karir teknologi yang cemerlang!</p>
+
+        <!-- Important Information -->
+        <div class="card p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Informasi Penting</h2>
+            <ul class="list-disc pl-5 text-gray-600">
+                <li>Pastikan data yang dimasukkan benar.</li>
+                <li>Upload dokumen (ijazah, transkrip, pas foto) hanya dapat dilakukan setelah terdaftar.</li>
+                <li>Username dan password akan dikirim ke email Anda setelah pendaftaran (cek folder SPAM).</li>
+                <li>Kartu ujian hanya dapat dicetak setelah divalidasi oleh operator.</li>
+                <li>Upload dokumen di <a href="https://siakadhandayani.web.id" class="text-blue-600 hover:underline">siakadhandayani.web.id</a> setelah registrasi.</li>
+            </ul>
+        </div>
+
+        <!-- Registration Schedule -->
+        <div class="card p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Jadwal Pendaftaran</h2>
+            <p class="text-gray-600 mb-4">Pendaftaran terbuka untuk Tahun Akademik 2025/2026:</p>
+            <ul class="list-disc pl-5 text-gray-600">
+                <li><strong>Periode:</strong> 1 Desember 2025 - 30 Mei 2025</li>
+                <li><strong>Status:</strong> Aktif</li>
+            </ul>
+        </div>
+
+        <!-- Study Programs -->
+        <div class="card p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Program Studi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="text-xl font-medium mb-2">S1 Teknik Informatika</h3>
+                    <p class="text-gray-600">Mempelajari pengembangan perangkat lunak, jaringan komputer, desain web, dan multimedia. Siap menjadi pengembang perangkat lunak atau spesialis IT.</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="text-xl font-medium mb-2">S1 Sistem Informasi</h3>
+                    <p class="text-gray-600">Fokus pada sistem informasi, manajemen database, dan solusi teknologi untuk bisnis. Siap berkarir sebagai analis sistem atau konsultan IT.</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="text-xl font-medium mb-2">S1 Sistem Komputer</h3>
+                    <p class="text-gray-600">Mempelajari dasar pemrograman, jaringan, dan sistem komputer secara menyeluruh. Lulusan siap berkarier sebagai network engineer, pengembang IoT, atau ahli keamanan informasi.</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <h3 class="text-xl font-medium mb-2">D3 Manajemen Informatika</h3>
+                    <p class="text-gray-600">Memfokuskan pada penerapan teknologi informasi dalam dunia bisnis. Lulusan dapat menjadi analis TI, administrator jaringan, atau pengembang perangkat lunak.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Costs -->
+        <div class="card p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Biaya Pendaftaran & Pendidikan</h2>
+            <p class="text-gray-600 mb-4">Biaya dapat dicicil 3 kali per semester:</p>
+            <ul class="list-disc pl-5 text-gray-600">
+                <li><strong>S1:</strong> Rp. 2.000.000 - Rp. 2.500.000 per semester</li>
+                <li><strong>D3:</strong> Rp. 1.500.000 - Rp. 2.000.000 per semester</li>
+                <li><strong>Potongan Biaya:</strong> Rp. 1.000.000 untuk 100 pendaftar pertama (Desember 2025 - Mei 2026).</li>
+            </ul>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="text-center mb-8">
+            <button id="toggleFormBtn" class="btn inline-block">Daftar Sekarang</button>
+        </div>
+        <div id="registrationForm" class="card p-6">
+            <h2 class="text-2xl font-semibold mb-4">Formulir Pendaftaran</h2>
+            <form id="regForm" onsubmit="event.preventDefault(); alert('Pendaftaran berhasil dikirim! Username dan password akan dikirim ke email Anda. Cek folder SPAM.');">
+                <!-- Data Mahasiswa -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-medium mb-3">Data Mahasiswa</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="fullName" class="block text-gray-600 mb-2">Nama Lengkap</label>
+                            <input type="text" id="fullName" name="fullName" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-600 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-600 mb-2">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                        </div>
+                        <div>
+                            <label for="address" class="block text-gray-600 mb-2">Alamat</label>
+                            <input type="text" id="address" name="address" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- Data Orang Tua -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-medium mb-3">Data Orang Tua</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="parentName" class="block text-gray-600 mb-2">Nama Orang Tua/Wali</label>
+                            <input type="text" id="parentName" name="parentName" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                        </div>
+                        <div>
+                            <label for="parentPhone" class="block text-gray-600 mb-2">Nomor Telepon Orang Tua/Wali</label>
+                            <input type="tel" id="parentPhone" name="parentPhone" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fakultas & Prodi -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-medium mb-3">Fakultas & Program Studi</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="faculty" class="block text-gray-600 mb-2">Fakultas</label>
+                            <select id="faculty" name="faculty" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                                <option value="" disabled selected>Pilih Fakultas</option>
+                                <option value="Fakultas Ilmu Komputer">Fakultas Ilmu Komputer</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="program" class="block text-gray-600 mb-2">Program Studi</label>
+                            <select id="program" name="program" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                                <option value="" disabled selected>Pilih Program Studi</option>
+                                <option value="S1 Teknik Informatika">S1 Teknik Informatika</option>
+                                <option value="S1 Sistem Informasi">S1 Sistem Informasi</option>
+                                <option value="S1 Sistem Komputer">S1 Sistem Komputer</option>
+                                <option value="D3 Manajemen Informatika">D3 Manajemen Informatika</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-4 text-gray-600">
+                    <p><strong>Catatan:</strong> Upload dokumen (ijazah, transkrip, pas foto) hanya dapat dilakukan setelah pendaftaran divalidasi. Anda akan menerima username dan password melalui email untuk mengakses <a href="https://siakadhandayani.web.id" class="text-blue-600 hover:underline">siakadhandayani.web.id</a>.</p>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn">Kirim Pendaftaran</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Universitas Handayani Makassar. All rights reserved.</p>
+            <p>Jl. Adyaksa Baru No. 1, Makassar, Sulawesi Selatan</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Form Toggle -->
+    <script>
+        const toggleFormBtn = document.getElementById('toggleFormBtn');
+        const registrationForm = document.getElementById('registrationForm');
+
+        toggleFormBtn.addEventListener('click', () => {
+            registrationForm.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
